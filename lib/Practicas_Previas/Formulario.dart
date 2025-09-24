@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../main.dart'; // 👈 para usar AppDrawer
 
 class Formulario extends StatefulWidget {
   const Formulario({super.key});
@@ -99,6 +100,7 @@ class _FormularioState extends State<Formulario> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Registro')),
+      drawer: const AppDrawer(), // 👈 Aquí agregamos el Drawer
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(

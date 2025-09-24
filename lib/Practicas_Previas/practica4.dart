@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../main.dart'; // 👈 para usar AppDrawer
 
 class Practica4 extends StatefulWidget {
   const Practica4({super.key});
@@ -39,10 +40,6 @@ class _Practica4State extends State<Practica4> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Práctica 4'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
         actions: [
           if (_helloList.isNotEmpty)
             IconButton(
@@ -52,6 +49,8 @@ class _Practica4State extends State<Practica4> {
             ),
         ],
       ),
+      drawer: const AppDrawer(), // 👈 aquí agregamos el Drawer
+
       body: Column(
         children: [
           Container(
